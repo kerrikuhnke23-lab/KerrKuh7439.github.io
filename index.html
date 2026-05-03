@@ -41,11 +41,27 @@
       <p> Just this one.</p>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Cell: (000) 223-5432.</p>
-    </section>
+  <h2>Contact</h2>
+
+  <form action="#" method="post">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject">
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <input type="submit" value="Send Message">
+
+  </form>
+</section>
 
   </main>
 
