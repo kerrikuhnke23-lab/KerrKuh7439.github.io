@@ -24,6 +24,8 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   background-color: #fffaf5;
 }
 
@@ -40,10 +42,18 @@ nav ul li a {
   transition: 0.3s;
 }
 
-/* Hover effect */
-nav ul li a:hover {
+/* Hover and Focus effect */
+nav ul li a:hover,
+nav ul li a:focus {
   background-color: #e8b4b8;
   color: white;
+}
+
+/* Main Flexbox Layout */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Main Sections */
@@ -56,6 +66,59 @@ section {
   box-shadow: 0 10px 30px rgba(150,120,100,0.08);
 }
 
+/* Contact Form Flexbox */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #5a4a42;
+}
+
+/* Input and Textarea Styling */
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #d6c6b8;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover and Focus for fields */
+input:hover,
+textarea:hover {
+  border-color: #dba39a;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #e8b4b8;
+  outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background-color: #dba39a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit Hover and Focus */
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #e8b4b8;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -63,4 +126,46 @@ footer {
   padding: 15px;
   background-color: #dba39a;
   color: white;
+}
+
+/* Responsive Design */
+
+/* Phone */
+@media screen and (min-width: 320px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    min-width: 1024px;
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    flex: 1 1 30%;
+  }
+
+  #contact {
+    flex: 1 1 100%;
+  }
 }
